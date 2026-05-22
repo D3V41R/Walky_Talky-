@@ -22,7 +22,10 @@ The hardware was designed entirely from scratch in KiCad and includes custom ana
 -Embedded real-time firmware architecture
 
 
-**State Machine**
+**System Diagram**
+
+<img width="1402" height="1122" alt="image" src="https://github.com/user-attachments/assets/073ec16c-0df7-4b26-91f8-ca09b7cb6f5c" />
+
 
 
 **Hardware Overview**
