@@ -8,5 +8,6 @@ Additional hardware features include a rotary encoder interface for FM-style cha
 
 This project was created to explore embedded systems, digital signal processing, RF communication, and real-time firmware architecture in a practical end-to-end hardware platform.
 
-<img width="4960" height="3507" alt="image" src="https://github.com/user-attachments/assets/b35fb95e-066f-472a-9e36-2c4ea9a8d050" />
+<img width="4960" height="3507" alt="image" src="https://github.com/user-attachments/assets/dc4c3640-fc49-46a2-9dcd-3c16f4166c40" />
+
 
