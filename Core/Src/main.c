@@ -20,6 +20,8 @@ DMA_HandleTypeDef hdma_usart1_tx;
 
 uint32_t callback_count = 0;
 
+
+
 void SystemClock_Config(void);
 static void MX_GPIO_Init(void);
 static void MX_DMA_Init(void);
@@ -39,10 +41,7 @@ int main(void)
 
 
 
-  /* Reset of all peripherals, Initializes the Flash interface and the Systick. */
   HAL_Init();
-
-  /* USER CODE BEGIN Init */
 
   SystemClock_Config();
 
@@ -57,17 +56,32 @@ int main(void)
   MX_USART2_UART_Init();
   MX_TIM2_Init();
 
+
+  HAL_Delay(1000);
+
   inmp_Start();
   HAL_TIM_Base_Start(&htim4);
 
 
+  // At top with other prototypes
+  void inmp_Start(void);
+  void RlyrrInit(void);
+  void RlyrrReceive(void);
+  extern uint8_t rx_flag;
+
+  // Replace your current main loop section
+  inmp_Start();
+  HAL_TIM_Base_Start(&htim4);
+  RlyrrInit();
+
   while (1)
   {
-    /* USER CODE END WHILE */
-
-    /* USER CODE BEGIN 3 */
+      if (rx_flag)
+      {
+          rx_flag = 0;
+          RlyrrReceive();
+      }
   }
-  /* USER CODE END 3 */
 }
 
 /**
